@@ -2,15 +2,19 @@
 
 ## Overview
 
-`tlb2_on_spark` is a Python project designed for processing large-scale data using Apache Spark. 
-It leverages the power of PySpark to handle big data efficiently and includes tlb2.0 stateful timeline to persist Spark DataFrames.
-Then we can leverage the power of PySpark's dataframe API to process the data.
+`tlb2_on_spark` is a project designed to process large-scale data by combining Apache Spark and TLB2.0. 
+It enables TLB2.0 to run on Spark, facilitating efficient large-scale data processing.
+Users can read large amounts of data from Moneta files stored in Google Cloud Storage,
+aggregate and process this data using TLB2.0, and persist and reload Spark DataFrames.
+The project leverages PySpark's capabilities to handle big data efficiently and
+includes TLB2.0's stateful timeline calculation for persisting Spark DataFrames.
+
+This allows users to utilize PySpark's DataFrame API for comprehensive data processing.
 
 ## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
-- [Project Structure](#project-structure)
 - [Modules](#modules)
     - [main.py](#mainpy)
     - [read_file.py](#read_filepy)
@@ -19,26 +23,11 @@ Then we can leverage the power of PySpark's dataframe API to process the data.
 
 ## Features
 
-- **Data Reading**: Read data from Avro files stored in Google Cloud Storage.
+- **Data Reading**: Read larger amount of data from Moneta files stored in Google Cloud Storage.
 - **Data Aggregation**: Aggregate data by partitions.
-- **Data Processing**: Process aggregated data using Translation Lookaside Buffer (TLB).
+- **Data Processing**: Process aggregated data using TLB2.0.
 - **Data Persistence**: Persist and reload Spark DataFrames.
-- **Unit Testing**: Comprehensive unit tests for all major functionalities.
-
-## Project Structure
-
-tlb2_on_spark/
-├── __init__.py
-├── main.py
-├── persist.py
-├── read_file.py
-tests/
-├── __init__.py
-├── test_main.py
-.gitignore
-README.md
-requirements.txt
-setup.py
+- **Data Analyst**: Analyze data using PySpark's DataFrame API.
 
 ## Modules
 main.py
